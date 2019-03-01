@@ -1,6 +1,6 @@
-# Quick start guide
+# Quick Start
 
-This document introduces how to apply SOFARPC for service publishing and reference. This example will simulate a server locally to listen to a port and publish a service, and the client will reference the service for direct call. 
+This document introduces how to apply SOFARPC for service publishing and reference. This example will simulate a server locally to listen to a port and publish a service, and then the client will reference the service for direct call. 
 
 You can get the code sample of this document by clicking [here](https://github.com/alipay/sofa-rpc/tree/master/example/src/test/java/com/alipay/sofa/rpc/quickstart). 
 
@@ -20,18 +20,18 @@ Create a new Maven project and introduce SOFARPC dependency.
 Note: The latest version can be found at https://github.com/alipay/sofa-rpc/releases. 
 
 ## Write a server implementation 
-Step 1: Create interface 
+Step 1: Create an interface 
 
 ```java 
 /** 
  * Quick Start demo interface 
  */
-Public interface HelloService { 
+public interface HelloService { 
     String sayHello(String string); 
 } 
 ``` 
 
-Step 2: Create interface implementation 
+Step 2: Create an interface implementation 
 
 ```java 
 /** 
@@ -73,7 +73,7 @@ public class QuickStartServer {
 ## Write a client implementation 
 Step 1: Get the server interface 
 
-In general, the server provides the interface class to the client in the form of `jar`. In this example, this step is skipped since the server and client are in the same project. 
+In general, the server provides the interface class to the client in the form of `jar`. However, in this example, this step is skipped since the server and client are in the same project. 
 
 Step 2: Write the client code 
 
