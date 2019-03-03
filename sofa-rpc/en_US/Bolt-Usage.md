@@ -2,7 +2,7 @@
 
 ### Publish Service
 
-To use SOFARPC to publish a Bolt-protocol service, you only need to add a Binding named bolt. The ways to add Bolt Binding are as follows:
+To publish a Bolt-protocol service with SOFARPC, you only need to add a Binding named bolt. The different ways to add Bolt Binding are as follows:
 
 #### XML
 
