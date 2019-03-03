@@ -18,7 +18,7 @@ ServerConfig serverConfig = new ServerConfig()
             .setPort(8803)
             .setProtocol("bolt");
 ```
-`ServerConfig` represents the container where service runs. The above declares a server using the 8803 port and the bolt protocol.
+`ServerConfig` represents the container where service runs. In the above snippet, it declares a server using the 8803 port and the bolt protocol.
 
 3. ProviderConfig
 ```java
@@ -29,7 +29,7 @@ ProviderConfig<HelloWorldService> providerConfig = new ProviderConfig<HelloWorld
             .setRegistry(registryConfig);
 providerConfig.export();
 ```
-`ProviderConfig` represents service publishing. The above declares the interface of the service, implements the server running the service, and eventually publishes the service by the `export` method.
+`ProviderConfig` represents service publishing. In the above snippet, it firstly declares the interface of a service, and then implements the server running the service, eventually publishes the service by the `export` method.
 
 ## Service reference
 Service reference involves two classes, namely `RegistryConfig` and `ConsumerConfig`.
@@ -39,4 +39,4 @@ ConsumerConfig<HelloService> consumerConfig = new ConsumerConfig<HelloService>()
             .setRegistry(registryConfig);
 HelloService helloService = consumerConfig.refer();
 ```
-`ConsumerConfig` represents service reference. The above declares the interface and service registry center of the referenced service interface, and finally references the service by the `refer` method to get the proxy for the remote call of the service.
+`ConsumerConfig` represents service reference. In the above snippet, it declares an interface and service registry center of the referenced service interface, and finally references the service by the `refer` method to get the proxy for the remote call of the service.
