@@ -1,4 +1,4 @@
-SOFARPC supports different communication protocols and currently supports Bolt, RESTful and Dubbo. For details, please refer to the corresponding document of each protocol:
+SOFARPC supports different transformation protocols and currently supports Bolt, RESTful and Dubbo. For details, please refer to the corresponding document of each protocol:
 
 * [Bolt Protocol](./Bolt)
     * [Basic usage](./Bolt-Usage)
