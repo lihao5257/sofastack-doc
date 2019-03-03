@@ -1,12 +1,12 @@
-# Generic call
+# Generic Call
 
-Generic calls provide the ability for clients to initiate calls without having to rely on the server`s interface. Currently, the generic call of SOFARPC only supports using Hessian2 as the serialization protocol under the Bolt communication protocol.
+Generic calls provide the ability for clients to initiate calls without having to rely on the server's interface. Currently, the generic call of SOFARPC only supports Hessian2 as the serialization protocol under the Bolt transformation protocol.
 
 ## SOFABoot environment
 
 ### Publish Service
 
-There is nothing special about publishing a service. Just publish the service normally, for example:
+Just publish the service normally as below:
 
 ```xml
 <!-- generic -->
@@ -26,7 +26,7 @@ There is nothing special about publishing a service. Just publish the service no
 </sofa:reference>
 ```
 
-The `jvm-first` can be left empty according to the actual situation. The interface should be the general interface of generic call. As for the `generic-interface`, you can just write in the name of the interface to be called.
+The `jvm-first` can be left empty according to the actual situation. The interface should be the general interface of a generic call. As for the item `generic-interface`, you can just write down the name of the interface to be called.
 
 ### Initiate a call
 
@@ -52,7 +52,7 @@ String result = (String) testService.$invoke("sayHello", new String[] { "java.la
 ```
 You can set the service as a generic service and set the interface name of the server by `setGeneric` as above. `GenericService` is used as a generic service, and GenericService can initiate generic calls. You need to pass in the method name, method type, and method parameters when invoking a call.
 
-If the parameter or return result is also required to be generalized on the client side, you can achieve this with `GenericObject`.
+You can also achieve this with `GenericObject` if the parameter or returned result is required to be generalized in the client side.
 ```java
 GenericObject genericObject = new GenericObject("com.alipay.sofa.rpc.invoke.generic.TestObj");
               
